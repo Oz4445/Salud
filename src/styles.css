@@ -1,0 +1,218 @@
+/* =============================================== */
+/*                ESTILO GLOBAL                    */
+/* =============================================== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #eef2f5; 
+  color: #222;
+  padding-top: 60px; /* Altura navbar */
+}
+
+/* =============================================== */
+/*                    NAVBAR                       */
+/* =============================================== */
+
+.nav {
+  background: #0d6efd;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;        /* ← Alineación perfecta */
+  padding: 0 35px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.20);
+  border-bottom: 2px solid rgba(255,255,255,0.25);
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center; /* ← Corrige desalineación */
+  gap: 8px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+  margin-left: 28px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+.links a:hover {
+  opacity: 0.78;
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.55);
+}
+
+/* =============================================== */
+/*                    CONTENEDOR                   */
+/* =============================================== */
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  background: white;
+  padding: 40px 60px;
+  margin: 40px auto;
+  box-sizing: border-box;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+/* =============================================== */
+/*                    TITULOS                      */
+/* =============================================== */
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #0a2a63;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 40px;
+  color: #0d3b85;
+  border-left: 5px solid #0d6efd;
+  padding-left: 12px;
+}
+
+/* =============================================== */
+/*                     TEXTO                       */
+/* =============================================== */
+
+p, li {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* =============================================== */
+/*                     NOTA                        */
+/* =============================================== */
+
+.nota {
+  background: #e8f0ff;
+  padding: 14px;
+  border-left: 5px solid #0d6efd;
+  margin-bottom: 25px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* =============================================== */
+/*                    IMÁGENES                     */
+/* =============================================== */
+
+.img {
+  width: 70%;
+  border-radius: 10px;
+  margin: 15px 0 25px 0;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.22);
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.img:hover {
+  transform: scale(1.04);
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.28);
+}
+
+/* =============================================== */
+/*                    FORMULARIO                   */
+/* =============================================== */
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  color: #222;
+  font-size: 16px;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
+}
+
+.form button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.form button:hover {
+  background: #084298;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =============================================== */
+/*                     VIDEO                       */
+/* =============================================== */
+
+iframe {
+  border-radius: 12px;
+  margin-bottom: 25px;
+  width: 700px;
+  height: 400px;
+  max-width: 100%;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.25);
+}
+
+/* =============================================== */
+/*           LIGHTBOX (AMPLIAR IMAGEN)             */
+/* =============================================== */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.lightbox img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+}
+
+.lightbox.open {
+  display: flex;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
