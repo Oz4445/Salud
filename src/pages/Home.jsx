@@ -24,7 +24,30 @@ export default function Home() {
 
       <h1>Dengue – Proyecto de Informática Médica</h1>
 
-      <p><strong>Autor:</strong></p>
+      {/* =============================== */}
+      {/*      NOTA ACLARATORIA (OBLIGATORIA) */}
+      {/* =============================== */}
+      <div
+        style={{
+          background: "#fff7c2",
+          borderLeft: "6px solid #e0b000",
+          padding: "15px",
+          margin: "20px 0",
+          borderRadius: "6px"
+        }}
+      >
+        <p><strong>Nombre completo:</strong> Emma Belén Ramírez</p>
+        <p>
+          Este sitio web es un trabajo elaborado para la Unidad de Aprendizaje de
+          Informática Médica del Plan de Estudios de la Licenciatura en Médico Cirujano.
+        </p>
+        <p>
+          Contiene información básica, material visual y recursos educativos sobre el tema 
+          del dengue, organizados para facilitar la comprensión del contenido.
+        </p>
+      </div>
+      {/* =============================== */}
+
 
       <h2>¿Qué es el Dengue?</h2>
       <p>
