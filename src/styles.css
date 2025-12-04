@@ -191,7 +191,6 @@ iframe {
 }
 
 @media (max-width: 850px) {
-  /* Botón hamburguesa */
   .hamburger {
     display: block;
     font-size: 32px;
@@ -199,7 +198,6 @@ iframe {
     cursor: pointer;
   }
 
-  /* Ocultar links por defecto */
   .links {
     display: none;
     flex-direction: column;
@@ -211,7 +209,6 @@ iframe {
     padding: 20px 0;
   }
 
-  /* Cuando el menú está abierto */
   .links.open {
     display: flex;
   }
@@ -222,7 +219,6 @@ iframe {
     font-size: 18px;
   }
 
-  /* Contenedor más cómodo */
   .container {
     padding: 20px;
     width: 94%;
@@ -235,4 +231,51 @@ iframe {
   h1 { font-size: 32px; }
   h2 { font-size: 24px; }
   p, li { font-size: 16px; }
+}
+
+/* =============================================== */
+/*       HAMBURGUESA ANIMADA (EFECTO X)            */
+/* =============================================== */
+
+.hamburger {
+  width: 35px;
+  height: 28px;
+  position: relative;
+  cursor: pointer;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: white;
+  left: 0;
+  border-radius: 4px;
+  transition: 0.35s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 12px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 24px;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 12px;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 12px;
 }

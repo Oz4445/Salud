@@ -10,10 +10,17 @@ export function Navbar() {
         Proyecto de Salud – Dengue
       </div>
 
-      <div className="hamburger" onClick={() => setOpen(!open)}>
-        ☰
+      {/* HAMBURGUESA ANIMADA */}
+      <div
+        className={`hamburger ${open ? "open" : ""}`}
+        onClick={() => setOpen(!open)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
+      {/* LINKS DEL MENÚ */}
       <div className={`links ${open ? "open" : ""}`}>
         <a href="/">Inicio</a>
         <a href="/publico">Para Público</a>
