@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Formulario from "../components/Formulario";
 
 export default function Home() {
 
@@ -43,14 +42,33 @@ export default function Home() {
       <h2>Video explicativo</h2>
       <div className="video-wrapper">
         <iframe
-           src="https://www.youtube.com/embed/m_01Dl8oKKQ"
+          src="https://www.youtube.com/embed/m_01Dl8oKKQ"
           title="Video Dengue"
           allowFullScreen
         ></iframe>
       </div>
 
       <h2>Formulario de contacto</h2>
-      <Formulario />
+      <p>Haz clic en el siguiente botón para llenar el formulario:</p>
+
+      {/* 🔵 BOTÓN DEL GOOGLE FORMS */}
+      <a
+        href="https://forms.gle/U2ywaCBPtYiBi9jh9"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: "inline-block",
+          padding: "12px 20px",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          borderRadius: "8px",
+          textDecoration: "none",
+          fontWeight: "bold",
+          marginTop: "10px"
+        }}
+      >
+        Abrir Formulario
+      </a>
 
       {/* LIGHTBOX PARA VER IMÁGENES EN GRANDE */}
       <div id="lightbox" className="lightbox">
